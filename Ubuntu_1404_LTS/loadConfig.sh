@@ -1,5 +1,8 @@
 #/bin/bash
 
+#Backup old config
+./backup.sh
+
 # Save git global config
 
 cp ./.gitconfig ~/.gitconfig
