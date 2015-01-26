@@ -19,5 +19,12 @@ cp -pr git $timeStamp/
 # Package the backup folder.
 tar -zcvf $timeStampDetail.tar.gz $timeStamp
 
+#Move the backup package to the folder.
+# Create the backup folder if it is not exist.
+if [[ ! -d loadBackup ]]; then
+	mkdir loadBackup
+fi
+mv $timeStampDetail.tar.gz loadBackup/
+
 # Remove the backup folder.
 rm -r $timeStamp
